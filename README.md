@@ -4,7 +4,8 @@
 
 **Class diagram:** 
 
-![employeeController.drawio (1).png](..%2FemployeeController.drawio%20%281%29.png)
+![employeeController drawio (1)](https://github.com/viveksumanth/SpringBoot-Crud-Hibernate/assets/61607315/a88d6838-a62a-4d88-8d50-e5886edfe877)
+
 
 ### endpoints
 
