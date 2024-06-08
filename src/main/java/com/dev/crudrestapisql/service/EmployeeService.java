@@ -1,6 +1,6 @@
-package com.example.crudrestapisql.service;
+package com.dev.crudrestapisql.service;
 
-import com.example.crudrestapisql.entity.Employee;
+import com.dev.crudrestapisql.entity.Employee;
 
 import java.util.List;
 

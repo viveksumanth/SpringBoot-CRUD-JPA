@@ -1,4 +1,4 @@
-package com.example.crudrestapisql.entity;
+package com.dev.crudrestapisql.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

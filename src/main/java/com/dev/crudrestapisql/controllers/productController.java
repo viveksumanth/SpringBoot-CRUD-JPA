@@ -1,12 +1,11 @@
-package com.example.crudrestapisql.controllers;
+package com.dev.crudrestapisql.controllers;
 
-import com.example.crudrestapisql.entity.Product;
-import com.example.crudrestapisql.service.ProductService;
+import com.dev.crudrestapisql.entity.Product;
+import com.dev.crudrestapisql.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -29,6 +28,11 @@ public class productController {
         return productService.getAllProducts();
     }
 
+    @GetMapping("/product")
+    public List<Product> getProductByName(@RequestParam("productName") String productName) {
+        return productService.getProductByName(productName);
+    }
+
     @PostMapping("/products")
     public Product addProduct(@RequestBody Product product) {
         product.setProductId(0);
@@ -42,7 +46,7 @@ public class productController {
     }
 
     @DeleteMapping("/products/{productId}")
-    public void deleteEmployee(@PathVariable int productId) {
+    public void deleteProduct(@PathVariable int productId) {
         productService.deleteProduct(productId);
     }
 }

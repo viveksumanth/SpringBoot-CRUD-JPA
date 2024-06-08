@@ -1,8 +1,8 @@
-package com.example.crudrestapisql.controllers;
+package com.dev.crudrestapisql.controllers;
 
 
-import com.example.crudrestapisql.entity.Employee;
-import com.example.crudrestapisql.service.EmployeeService;
+import com.dev.crudrestapisql.entity.Employee;
+import com.dev.crudrestapisql.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

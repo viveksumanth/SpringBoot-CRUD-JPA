@@ -1,6 +1,6 @@
-package com.example.crudrestapisql.dao;
+package com.dev.crudrestapisql.dao;
 
-import com.example.crudrestapisql.entity.Employee;
+import com.dev.crudrestapisql.entity.Employee;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,6 @@ public class EmployeeDAOJPA implements EmployeeDao {
 
     @Override
     public List<Employee> getAllEmployees() {
-        System.out.println("getAllEmployees() called");
         // create a query
         TypedQuery<Employee> getAllEmployeesQuery = entityManager.createQuery("from Employee", Employee.class);
         // execute the query

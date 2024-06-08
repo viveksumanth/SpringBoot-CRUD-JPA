@@ -1,7 +1,7 @@
-package com.example.crudrestapisql.service;
+package com.dev.crudrestapisql.service;
 
-import com.example.crudrestapisql.dao.ProductRepository;
-import com.example.crudrestapisql.entity.Product;
+import com.dev.crudrestapisql.dao.ProductRepository;
+import com.dev.crudrestapisql.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -44,5 +44,10 @@ public class productServiceImpl implements ProductService {
     @Override
     public void deleteProduct(int id) {
         productRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Product> getProductByName(String name) {
+        return productRepository.getProductByName(name);
     }
 }

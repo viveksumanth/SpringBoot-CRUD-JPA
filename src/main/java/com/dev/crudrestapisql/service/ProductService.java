@@ -1,6 +1,6 @@
-package com.example.crudrestapisql.service;
+package com.dev.crudrestapisql.service;
 
-import com.example.crudrestapisql.entity.Product;
+import com.dev.crudrestapisql.entity.Product;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,4 +14,5 @@ public interface ProductService {
     Product saveProduct(Product product);
 
     void deleteProduct(int id);
+    List<Product> getProductByName(String name);
 }

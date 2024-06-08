@@ -1,6 +1,7 @@
-package com.example.crudrestapisql.dao;
+package com.dev.crudrestapisql.dao;
 
-import com.example.crudrestapisql.entity.Employee;
+import com.dev.crudrestapisql.entity.Employee;
+
 import java.util.List;
 
 public interface EmployeeDao {

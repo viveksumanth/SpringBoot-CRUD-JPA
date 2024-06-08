@@ -1,7 +1,7 @@
-package com.example.crudrestapisql.service;
+package com.dev.crudrestapisql.service;
 
-import com.example.crudrestapisql.dao.EmployeeDao;
-import com.example.crudrestapisql.entity.Employee;
+import com.dev.crudrestapisql.dao.EmployeeDao;
+import com.dev.crudrestapisql.entity.Employee;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
