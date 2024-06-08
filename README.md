@@ -125,8 +125,7 @@ Body
 ```
 -----------
 ### ProductController : Spring boot data jpa implementation (Approach 2)
-
-![ProductController.drawio.png](..%2FProductController.drawio.png)
+![ProductController drawio](https://github.com/viveksumanth/SpringBoot-Crud-Hibernate/assets/61607315/f1ec9837-8140-4eb3-a369-26e6f4b63f6f)
 
 ### endpoints
 
