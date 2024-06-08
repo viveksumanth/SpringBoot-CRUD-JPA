@@ -1,4 +1,4 @@
-# REST CRUD API Implementations (Include better heading)
+# REST CRUD API Implementations
 
 This repository provides a RESTful CRUD API implementation using Spring Boot. It includes three different approaches for managing entities: `EmployeeController`, `ProductController`, and `CompanyController`.
 
