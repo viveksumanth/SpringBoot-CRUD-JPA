@@ -1,4 +1,4 @@
-# REST CRUD API Implementations
+# REST CRUD API Implementations (Include better heading)
 
 This repository provides a RESTful CRUD API implementation using Spring Boot. It includes three different approaches for managing entities: `EmployeeController`, `ProductController`, and `CompanyController`.
 
@@ -7,10 +7,10 @@ This repository provides a RESTful CRUD API implementation using Spring Boot. It
 ### Prerequisites
 
 Ensure you have the following installed:
-
 - Java Development Kit (JDK) 8 or higher
 - Apache Maven
 - MySQL
+
 ### Dependencies
 
 Add the following dependencies in your `pom.xml` file:
@@ -73,74 +73,135 @@ spring.data.rest.base-path=/base/api
 ```
 ### Running the Application 
 
-
 ```bash
  mvn spring-boot:run
 ```
 -----
-## API End Points
-### EmployeeController : Entity manager implementation (Approach 1)
+## API Endpoints
 
-**Class diagram:** 
+### EmployeeController: Entity Manager Implementation (Approach 1)
 
-![employeeController drawio (1)](https://github.com/viveksumanth/SpringBoot-Crud-Hibernate/assets/61607315/a88d6838-a62a-4d88-8d50-e5886edfe877)
+**Class Diagram:**
 
-### endpoints: 
+![EmployeeController Diagram](https://github.com/viveksumanth/SpringBoot-Crud-Hibernate/assets/61607315/a88d6838-a62a-4d88-8d50-e5886edfe877)
 
-#### Insert new Employee in DB
+#### Endpoints
 
-    * POST http://localhost:8080/api/employees
+- **Insert New Employee**
+    - **POST** `http://localhost:8080/api/employees`
+    - **Request Body**:
+    ```json
+    {
+        "id": 1,
+        "firstName": "Leslie",
+        "lastName": "Andrews",
+        "age": 10,
+        "gender": "Male",
+        "role": "Software Engineer 1"
+    }
+    ```
 
-Body
-```dtd
-{
-    "id": 1,
-    "firstName": "Leslie",
-    "lastName": "Andrews",
-    "age": 10,
-    "gender": "Male",
-    "role": "Software Engineer 1"
-}
-```
+- **Get All Employees**
+    - **GET** `http://localhost:8080/api/allemployees`
 
-#### Get all employees from DB
-    * GET http://localhost:8080/api/allemployees
+- **Get Employee by ID**
+    - **GET** `http://localhost:8080/api/employees/{id}`
 
-#### Get all employees by id
-    * GET http://localhost:8080/api/employees/{id}
+- **Update Existing Employee**
+    - **PUT** `http://localhost:8080/api/employees`
+    - **Request Body**:
+    ```json
+    {
+        "id": 1,
+        "firstName": "Leslie",
+        "lastName": "Andrews",
+        "age": 10,
+        "gender": "Male",
+        "role": "Software Engineer 1"
+    }
+    ```
 
-#### Update existing Employee in DB
-    * POST http://localhost:8080/api/employees
+- **Delete Existing Employee**
+    - **DELETE** `http://localhost:8080/api/employees/{id}`
 
-Body
-```dtd
-{
-    "id": 1,
-    "firstName": "Leslie",
-    "lastName": "Andrews",
-    "age": 10,
-    "gender": "Male",
-    "role": "Software Engineer 1"
-}
-```
------------
-### ProductController : Spring boot data jpa implementation (Approach 2)
-![ProductController drawio](https://github.com/viveksumanth/SpringBoot-Crud-Hibernate/assets/61607315/f1ec9837-8140-4eb3-a369-26e6f4b63f6f)
+### ProductController: Spring Boot Data JPA Implementation (Approach 2)
 
-### endpoints
+**Class Diagram:**
 
-* Write documentation about which part of the code it replaces
+![ProductController Diagram](https://github.com/viveksumanth/SpringBoot-Crud-Hibernate/assets/61607315/f1ec9837-8140-4eb3-a369-26e6f4b63f6f)
 
-------------
-### CompanyController : Spring boot data jpa rest implementation (Approach 3)
-* **Class diagram:**
-![CompanyController drawio](https://github.com/viveksumanth/SpringBoot-Crud-Hibernate/assets/61607315/ba14c813-57ae-4d1b-807d-db17b7947e8f)
+#### Endpoints
 
+- **Insert New Product**
+    - **POST** `http://localhost:8080/api/products`
+    - **Request Body**:
+    ```json
+    {
+        "productId": 4,
+        "productName": "sharpner",
+        "productPrice": 5.0,
+        "productStatus": "IN_STOCK"
+    }
+    ```
 
-### endpoints
-* Write documentation about which part of the code it replaces
+- **Get All Products**
+    - **GET** `http://localhost:8080/api/allProducts`
 
-------------
-4. Setup PostMan steps
-5. Include sql file. 
-5. 
+- **Get Product by ID**
+    - **GET** `http://localhost:8080/api/products/{id}`
+
+- **Update Existing Product**
+    - **PUT** `http://localhost:8080/api/products`
+    - **Request Body**:
+    ```json
+    {
+        "productId": 4,
+        "productName": "sharpner",
+        "productPrice": 5.0,
+        "productStatus": "IN_STOCK"
+    }
+    ```
+
+- **Delete Existing Product**
+    - **DELETE** `http://localhost:8080/api/products/{id}`
+
+- **Get Products by Name**
+    - **GET** `http://localhost:8080/api/products?productName={productName}`
+
+### CompanyController: Spring Boot Data JPA REST Implementation (Approach 3)
+
+**Class Diagram:**
+
+![CompanyController Diagram](https://github.com/viveksumanth/SpringBoot-Crud-Hibernate/assets/61607315/ba14c813-57ae-4d1b-807d-db17b7947e8f)
+
+#### Endpoints
+
+- **Insert New Company**
+  - **POST** `http://localhost:8080/base/api/companies`
+    - **Request Body**:
+      ```json
+      {
+      "companyId": 3,
+      "companyName": "amazon"
+      }
+      ```
+
+- **Get All Companies**
+  - **GET** `http://localhost:8080/base/api/companies`
+
+- **Get Company by ID**
+  - **GET** `http://localhost:8080/base/api/companies/{id}`
+
+- **Update Existing Product**
+  - **PUT** `http://localhost:8080/base/api/companies/{id}`
+  - **Request Body**:
+  ```json
+  {
+  "companyName": "zotec partners"
+  }
+  ```
+
+- **Delete Existing Product**
+  - **DELETE** `http://localhost:8080/base/api/companies/{id}`
+
+---
