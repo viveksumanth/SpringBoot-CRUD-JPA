@@ -134,6 +134,8 @@ Body
 ------------
 ### CompanyController : Spring boot data jpa rest implementation (Approach 3)
 * **Class diagram:**
+![CompanyController drawio](https://github.com/viveksumanth/SpringBoot-Crud-Hibernate/assets/61607315/ba14c813-57ae-4d1b-807d-db17b7947e8f)
+
 
 ### endpoints
 * Write documentation about which part of the code it replaces
