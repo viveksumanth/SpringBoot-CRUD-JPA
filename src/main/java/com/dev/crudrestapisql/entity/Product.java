@@ -1,4 +1,4 @@
-package com.example.crudrestapisql.entity;
+package com.dev.crudrestapisql.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -21,6 +21,10 @@ public class Product {
 
     @Column(name = "product_price")
     private double productPrice;
+
+    @Column(name = "product_status")
+    @Enumerated(EnumType.STRING)
+    private ProductStatus productStatus;
 
 
     @Override
