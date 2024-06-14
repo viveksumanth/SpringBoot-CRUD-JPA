@@ -1,13 +1,15 @@
 package com.dev.crudrestapisql.controllers;
 
-
 import com.dev.crudrestapisql.entity.Employee;
 import com.dev.crudrestapisql.service.EmployeeService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
+@Tag(name = "Employee EndPoints", description = "Employee CRUD operations")
 @RestController
 @RequestMapping("/api")
 public class employeeController {
