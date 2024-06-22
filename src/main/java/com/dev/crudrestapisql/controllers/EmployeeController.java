@@ -12,14 +12,10 @@ import java.util.List;
 @Tag(name = "Employee EndPoints", description = "Employee CRUD operations")
 @RestController
 @RequestMapping("/api")
-public class employeeController {
-
-    private final EmployeeService employeeService;
+public class EmployeeController {
 
     @Autowired
-    public employeeController(EmployeeService employeeService) {
-        this.employeeService = employeeService;
-    }
+    private EmployeeService employeeService;
 
     @GetMapping("/employees/{id}")
     public Employee getEmployeeById(@PathVariable int id) {
