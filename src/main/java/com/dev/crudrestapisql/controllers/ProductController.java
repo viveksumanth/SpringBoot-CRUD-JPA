@@ -11,12 +11,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 @Tag(name = "Product EndPoints", description = "Product CRUD operations")
-public class productController {
+public class ProductController {
 
     private final ProductService productService;
 
     @Autowired
-    public productController(ProductService productService) {
+    public ProductController(ProductService productService) {
         this.productService = productService;
     }
 
