@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: crud-restapi-sql
+  datasource:
+    url: jdbc:mysql://localhost:3307/employee_directory
+    username: root
+    password: springstudent
+  jpa:
+    show-sql: true
+  sql:
+    init:
+      mode: always
+  data:
+    rest:
+      base-path=/base/api:
+
+  build:
+    version: "1.0"
