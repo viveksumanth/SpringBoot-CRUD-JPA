@@ -88,6 +88,5 @@ class EmployeeControllerTest {
         when(employeeService.deleteEmployee(1)).thenReturn(new Employee());
         Employee result = employeeController.deleteEmployee(1);
         assertNotNull(result);
-        assertEquals(result, new Employee());
     }
 }

@@ -1,13 +1,12 @@
 package com.dev.crudrestapisql.entity;
 
+import com.dev.crudrestapisql.entity.enums.ProductStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name="products")
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Product {
@@ -34,6 +33,38 @@ public class Product {
                 ", productName='" + productName + '\'' +
                 ", productPrice=" + productPrice +
                 '}';
+    }
+
+    public int getProductId() {
+        return productId;
+    }
+
+    public void setProductId(int productId) {
+        this.productId = productId;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public double getProductPrice() {
+        return productPrice;
+    }
+
+    public void setProductPrice(double productPrice) {
+        this.productPrice = productPrice;
+    }
+
+    public ProductStatus getProductStatus() {
+        return productStatus;
+    }
+
+    public void setProductStatus(ProductStatus productStatus) {
+        this.productStatus = productStatus;
     }
 }
 

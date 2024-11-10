@@ -38,7 +38,6 @@ public class ProductController {
     @PostMapping("/products")
     public Product addProduct(@RequestBody Product product) {
         product.setProductId(0);
-        System.out.println(product);
         return productService.saveProduct(product);
     }
 

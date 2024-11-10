@@ -13,6 +13,7 @@
 	<artifactId>crud-restapi-sql</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>crud-restapi-sql</name>
+	<packaging>jar</packaging>
 
 	<description>Project with crud rest api and sql integration</description>
 

@@ -1,4 +1,4 @@
-package com.dev.crudrestapisql.entity;
+package com.dev.crudrestapisql.entity.enums;
 
 public enum ProductStatus {
     IN_STOCK,

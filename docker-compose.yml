@@ -1,0 +1,42 @@
+services:
+  employee_directoryDB:
+    image: mysql
+    container_name: employee_directoryDB
+    ports:
+      - "3308:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 10s
+      retries: 10
+      interval: 5s
+      start_period: 30s
+    environment:
+      MYSQL_DATABASE: employee_directoryDB
+      MYSQL_ROOT_PASSWORD: springstudent
+    networks:
+      - spring-boot-crud-jpa-network
+
+  spring-boot-crud-jpa:
+    image: "viveksumanth/crud-restapi-sql:v2"
+    container_name: spring-boot-crud-jpa
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          memory: 1500m
+          cpus: 0.5
+    environment:
+      SPRING_APPLICATION_NAME: "crud-restapi-sql"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://employee_directoryDB:3306/employee_directoryDB"
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: springstudent
+    depends_on:
+      employee_directoryDB:
+        condition: service_healthy
+    networks:
+      - spring-boot-crud-jpa-network
+
+networks:
+  spring-boot-crud-jpa-network:
+    driver: "bridge"
