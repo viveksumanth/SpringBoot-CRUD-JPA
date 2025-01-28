@@ -203,5 +203,4 @@ spring.data.rest.base-path=/base/api
 
 - **Delete Existing Product**
   - **DELETE** `http://localhost:8080/base/api/companies/{id}`
-  - this is a dummy line for testing!!
 ---
